@@ -1,0 +1,66 @@
+{
+  "name": "image_updater",
+  "version": "0.1.1",
+  "private": true,
+  "description": "The client for the Image Updater application.",
+  "author": "Howard Tseng",
+  "build": {
+    "appId": "com.howardt12345.image_updater"
+  },
+  "main": "public/electron.js",
+  "homepage": "./",
+  "dependencies": {
+    "@firebase/app": "^0.6.5",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@reach/router": "^1.3.3",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "concurrently": "^5.2.0",
+    "electron-is-dev": "^1.2.0",
+    "firebase": "^7.15.1",
+    "material-ui-dropzone": "^3.3.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-responsive-masonry": "^2.1.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "react-uuid": "^1.0.2",
+    "styled-components": "^5.1.1",
+    "wait-on": "^5.0.1"
+  },
+  "scripts": {
+    "react-start": "react-app-rewired start",
+    "react-build": "react-app-rewired build",
+    "react-test": "react-app-rewired test",
+    "react-eject": "react-scripts eject",
+    "electron-build": "electron-builder",
+    "electron-dev": "concurrently \"npm run react-start\" \"wait-on http://localhost:3000 && electron .\"",
+    "release": "npm run react-build && electron-builder --publish=always",
+    "build": "npm run react-build && npm run electron-build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^9.0.3",
+    "electron-builder": "^22.7.0",
+    "react-app-rewire-alias": "^0.1.6",
+    "react-app-rewired": "^2.1.6"
+  }
+}
