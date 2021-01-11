@@ -9,7 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 1. Installing Electron:
 
    ```sh
-   npm install -g electron
+   npm install electron --save
    ```
 
 2. Install dependencies:
